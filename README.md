@@ -11,6 +11,16 @@ at line 61.
 
 The figure plot is saved as a `.svg` (so, open it with Inkscape for example). 
 
+An example of the output figure can be the following figure:
+
+![Analysis](https://github.com/leos313/python_git_analysis/blob/master/analysis.png)
+
+As you can see, it was used on a git repo where the master brach has 84 commits.
+
+Fell free to re-use the script and please cite the current work.
+
+Enjoy
+
 *Leonardo Suriano*
 
 
