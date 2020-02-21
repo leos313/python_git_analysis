@@ -19,6 +19,8 @@ As you can see, it was used on a git repo where the master brach has 84 commits.
 
 Fell free to re-use the script and please cite the current work.
 
+The idea of writing down this script come from [this StackOverflow question](https://stackoverflow.com/questions/60321741/automatically-count-the-modification-for-instance-added-deleted-letters-along).
+
 Enjoy
 
 *Leonardo Suriano*
