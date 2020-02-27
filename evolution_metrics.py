@@ -68,6 +68,7 @@ if __name__ == "__main__":
     # fifty_first_commits = list(repo.iter_commits('master', max_count=50))
     all_commits = list(repo.iter_commits('master'))
     number_commits = len(all_commits)
+    number_commits = len(all_commits)
     """
     all_commits[0].hexsha
     all_commits[0].parents
@@ -95,7 +96,11 @@ if __name__ == "__main__":
         headcommit = repo.head.commit
         print(str(i) + "/" + str(number_commits-1) + " ---> " + headcommit.hexsha)
         git = repo.git
-        string=git.diff('HEAD~1')
+        try:
+            string=git.diff('HEAD~1')
+        except:
+            number_commits = i
+            break
         f=open(dirName + "/difference.diff","w")
         f.write(string.encode('utf-8', 'surrogateescape').decode('ISO-8859-1'))
         f.close()
@@ -103,6 +108,7 @@ if __name__ == "__main__":
     
     repo.head.reference = master
     delete_temp_dir(dirName)
+    output = output[:number_commits]
     added_lines = [None] * len(output)
     sub_lines = [None] * len(output)
     added_letters = [None] * len(output)
@@ -118,7 +124,7 @@ if __name__ == "__main__":
     plt.plot(added_lines, label='line added')
     plt.plot(sub_lines, label='line deleted')
     # plt.plot(added_letters)
-    plt.plot(sub_letters, label='letters deleted')
+    # plt.plot(sub_letters, label='letters deleted')
     ax1.set_xlabel('Commit')
     ax1.set_ylabel('Number of #')
     plt.title("Work Evolution with Git")
