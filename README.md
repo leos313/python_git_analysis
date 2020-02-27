@@ -21,7 +21,9 @@ Fell free to re-use the script and please cite the current work.
 
 The idea of writing down this script come from [this StackOverflow question](https://stackoverflow.com/questions/60321741/automatically-count-the-modification-for-instance-added-deleted-letters-along).
 
-Enjoy
+*It was made just for fun. If you want to contribute, enhancing the little project (for instance some idea can be [1] managing and analyzing multiple branch and not only `master`, or [2] adding a minimal GUI), it will be a pleasure to test your improvements.*
+
+Ragards,
 
 *Leonardo Suriano*
 
